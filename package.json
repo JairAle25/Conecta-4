@@ -2,7 +2,7 @@
   "name": "4-en-raya",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://JairAle25.github.io/Conecta-4",
+  "homepage": "https://jairale25.github.io/Conecta-4/",
   "type": "module",
   "scripts": {
     "predeploy":"npm run build",
