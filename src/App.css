@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.contJuego{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.contJuego .titulo{
+  color: white;
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+.circulo {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 48px;
+}
+.juego {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.turnos{
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.seleccionado{
+  background-color: rgb(34, 255, 0);
+}
+.ganador{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.ganador .texto {
+  background: rgb(8, 8, 8);
+  height: 300px;
+  width: 320px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.texto h1{
+  color: #fbeec2;
+  font-size: 2rem;
+}
+.reinicio{
+  margin-top: 2rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  border: 2px solid rgb(16, 14, 14);
+  background-color: white;
+  color: rgb(16, 14, 14);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.reinicio:hover{
+  background-color: rgb(16, 14, 14);
+  color: white;
+  border: 2px solid white;
+}
+.circulos{
+  font-size: 3.6rem;
+}
