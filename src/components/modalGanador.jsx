@@ -5,6 +5,7 @@ export const ModalGanador =({ganador,ResetJuego})=>{
       return null;
     }
     const textoGanador = ganador==false ? 'Empate' : 'Gano';
+
     return(
       <section className='ganador'>
         <div className='texto'>

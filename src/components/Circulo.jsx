@@ -1,10 +1,12 @@
-export const Circulo = ({children,index,actualizarTablero,seleccionado}) =>{
+export const Circulo = ({children,index,actualizarTablero,seleccionado,ganador}) =>{
     const Actualizar =()=>{
       actualizarTablero(index);
     }
-      const nombreClase = `circulo ${seleccionado ? 'seleccionado' : ''}`
+   
+    const nombreClaseTablero = `circulo ${seleccionado ? 'seleccionado' : ''}`
+
     return(
-      <div onClick={Actualizar} className={nombreClase}>
+      <div onClick={Actualizar} className={nombreClaseTablero}>
         <span className='circulos'>
         {children}
         </span>

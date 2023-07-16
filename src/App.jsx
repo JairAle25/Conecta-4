@@ -1,21 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import { TURNOS} from './logic/Constantes'
-import { IndicarColumna,posicionColocar,ChekearGanador} from './logic/Tablero'
+import { IndicarColumna,posicionColocar,ChekearGanador,chekearEmpate} from './logic/Tablero'
 import { ModalGanador } from './components/modalGanador'
 import { Circulo } from './components/Circulo'
 
-const chekearEmpate =(tableroCheckear)=>{
-  let empate = true;
-  tableroCheckear.forEach(pos => {
-    if(pos==null)
-    {
-      console.log(pos);
-      empate=false;
-    }
-  });
-  return empate;
-}
+
 
 function App() {
   const [tablero,setTablero] = useState(Array(35).fill(null));
@@ -29,11 +19,11 @@ function App() {
   }
 
   const actualizarTablero=(index)=>{
-    if(tablero[index]!=null || ganador!=null) return;
+    if(ganador!=null) return;
 
     //Actualizando Tablero
     const nuevoTablero = [...tablero];
-    const pos=posicionColocar(IndicarColumna(index),nuevoTablero);
+    const pos = posicionColocar(IndicarColumna(index),nuevoTablero);
     if(pos==null){
       return;
     } 
@@ -52,6 +42,7 @@ function App() {
       setGanador(false);
     }
   }
+
   return (
     <main className='contJuego'>
       <h1 className='titulo'>Conecta 4</h1>
@@ -63,6 +54,7 @@ function App() {
                 key={index} 
                 index={index} 
                 actualizarTablero={actualizarTablero}
+                ganador={ganador}
                 >
                 {tablero[index]}
               </Circulo>
@@ -82,7 +74,7 @@ function App() {
         <button onClick={ResetJuego} className='reinicio'>Reiniciar Juego</button>
       </section>
       <section>
-        <ModalGanador ganador={ganador} ResetJuego={ResetJuego}/>
+        {ganador && <ModalGanador ganador={ganador} ResetJuego={ResetJuego}/>}
       </section>
     </main>
   )

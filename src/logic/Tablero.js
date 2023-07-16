@@ -17,6 +17,7 @@ export const posicionColocar =(columnaIndicada,nuevoTablero)=>{
     const posicion = columnaIndicada.find(column => nuevoTablero[column]==null);
     return posicion != null ? posicion : null
 }
+
 export const ChekearGanador =(tableroChekear) =>{
     for(const comb of CombGanadoras){
       const [a,b,c,d] = comb;
@@ -30,4 +31,15 @@ export const ChekearGanador =(tableroChekear) =>{
       }
     }
     return null;
+}
+
+export const chekearEmpate =(tableroCheckear)=>{
+    let empate = true;
+    tableroCheckear.forEach(pos => {
+      if(pos==null)
+      {
+        empate=false;
+      }
+    });
+    return empate;
 }
