@@ -12,6 +12,12 @@ Este proyecto fue creado como parte de mi práctica para mejorar mis habilidades
 
 - **Juego de Dos Jugadores:** Puedes disfrutar del juego en la misma PC con un amigo. Cada jugador toma turnos para colocar sus fichas en el tablero hasta que uno de ellos logra conectar cuatro fichas.
 
+## Tecnologías Utilizadas
+
+- React <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" style="width:23px;">
+- HTML y CSS <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" alt="" width="20px"> <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" alt="" width="20px">
+- Git y GitHub <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" style="width:23px;">
+
 ## <span style="color:blue">Cómo Jugar</span>
 
 Aqui te dejo el link para empezar jugar : [conecta-4-jair.netlify.app](https://conecta-4-jair.netlify.app/)
